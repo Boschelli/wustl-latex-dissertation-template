@@ -1,7 +1,6 @@
 \documentclass{wustlthesis}
-
 \setmainfont{Times New Roman}               % Use Times New Roman
-\setmathfont{STIXTwoMath}[math-style=ISO]   % Use math font that matches Times New Roman
+
 
 % Re-calculate the lengths of a text line using the current font
 \setlxvchars[\normalfont\normalsize]
@@ -74,57 +73,81 @@
 %   - Display DOI
 %   - Show up to 9 authors
 %   - Enable back references
-\usepackage[
-    backend=biber,
-    style=nature,
-    date=year,
-    isbn=false, url=false, doi=true,
-    minnames=1, maxnames=9,
-    backref=true
-]{biblatex}
-% rename bibliography section name
-\DefineBibliographyStrings{english}{
-    bibliography = {References},
-    backrefpage = {cited on p\adddot},
-    backrefpages = {cited on pp\adddot}}
-% hide PubMed ID (pmid:xxx) in the bibliography
-\DeclareFieldFormat{eprint:pmid}{}
+\usepackage[backend=bibtex,authordate, giveninits=false,
+uniquename=mininit, natbib]{biblatex-chicago}
+\def\citeapos#1{\citeauthor{#1}'s (\citeyear{#1})}
+
+
+
+% Change colors of urls
+\usepackage{xcolor}
+\definecolor{navy}{HTML}{2F729C}
+\definecolor{darkred}{rgb}{0.55, 0.0, 0.0}
+\usepackage{hyperref}
+\hypersetup{colorlinks, citecolor=navy, linkcolor=black, urlcolor=navy}
+
+\usepackage{float}
+\usepackage{caption}
+
+\renewcommand{\bibname}{Reference}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,matrix}
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\usepackage{pifont}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{white},
+  frame=single,
+  breaklines=true,
+  captionpos=b,
+  numbers=left,
+  numberstyle=\tiny\color{white},
+  xleftmargin=0pt,
+  xrightmargin=0pt,
+  keywordstyle=\color{black},
+  stringstyle=\color{purple},
+  commentstyle=\color{green},
+  showstringspaces=false,
+  tabsize=4
+}
+
 
 % define the bibliography path
-\addbibresource{references.bib}
+\addbibresource{MyLibrary}
 
 
 
 % Configure title page
-\settitle{A Mock Thesis on the Proper Formatting of Dissertations and Theses for\\ Arts \& Sciences Graduate Students}
-\setauthor{Paige Turner}
+\settitle{A Big Voice in a Small Democracy: Three Papers on American Local Politics}
+\setauthor{Lucas Boschelli}
 \setthesistype{Dissertation}
 \setthesisdegree{Doctor of Philosophy}
 \setthesisdegreeabbrv{Ph.D.}
 % Degree officially earn date must be in December, May, or August
-\setdegreedatemy{August}{2022}
+\setdegreedatemy{May}{2024}
 \setthesiscommittee{%
-    Katherine Davidsen, Chair\\
-    Michael Randolf, Co-Chair\\
-    Richard Lewis\\
-    Hillary O'Connell\\
-    Jack Taylor}
-\setthesisschool{Division of Biology and Biomedical Sciences}
-\setthesisdepartment{Neurosciences}
+    Betsy Sinclair, Chair\\
+    Dino Christenson \\
+    Andrew Reeves\\
+    Christopher Lucas\\
+    Janet Box-Steffensmeier}
+\setthesisschool{School of Arts \& Sciences}
+\setthesisdepartment{Department of Political Science}
 \setthesispresentee{Washington University in St.\@ Louis}
 \setthesisabstractfulldegree{%
-    \thesisdegree\ in Biology and Biomedical Sciences\\
+    \thesisdegree\ in Political Science\\
     \thesisdepartment}
 \setthesisadvisorwithtitle{%
-    Professor Katherine Davidsen, Chair\\
-    Professor Michael Randolf, Co-Chair}
+    Professor Betsy Sinclair, Chair\\}
 
 
 % Configure PDF metadata
 \hypersetup{
     pdftitle={%
-        A Mock Thesis on the Proper Formatting of%
-        Dissertations and Theses for Arts \& Sciences Graduate Students%
+    A Big Voice in a Small Democracy: Three Papers on American Local Politics
     },
     pdfauthor={\thesisauthor},
 }
@@ -146,7 +169,7 @@
 \thetitlepage                       % Title page
 \frontmatter
 \thesiscopyright{%                  % Thesis copyright page
-    \textcopyright~\degreeearnyear, Paige Turner}
+    \textcopyright~\degreeearnyear, Lucas Boschelli}
 
 \SingleSpacing*
 \setSingleSpace{1.15}
@@ -158,30 +181,34 @@
 \setPagenoteSpacing{1}  % single spacing for footnotes
 \include{thesis-acknowledgments}    % Acknowledgements
 \thesisdedication{%                 % Dedication page
-    Dedicated to my parents.}
+    Dedicated to everyone who helped me thrive.}
 
 \begin{abstract}
-After removing these comments, begin typing the body of your abstract here, double-spaced.
-Your font should be 12-point (which is the text of this sample paragraph).
-No part of the abstract should be bolded.
-In the abstract heading above, make sure you use the year your degree is to be officially earned.
-Be sure to use your full name as it is recorded in WebSTAC, your dissertation or
-thesis advisor's full name(s) wherever appropriate, and the correct title of your degree whenever referencing it.
-The title of your degree will not always be the same as the title of your department or program, so please check with your departmental administrative assistant and advisor(s) to be sure you are using the correct degree title.
-Please note that an abstract is required for all dissertation submissions in ProQuest.
+An individual's greatest political voice is often within America's smallest democracies. Through three papers, this dissertation explores three key dimensions of political participation within America's local governments: representation, evaluation, and coverage. The first paper explores the question of whether a more accessible local government is a more representative one. By leveraging the switch to online meetings induced by the COVID-19 pandemic, I analyze whether the shift to more accessible meetings promotes healthy democratic participation or amplifies pre-existing inequities in local political participation. To accomplish this, I first construct a novel dataset of public meeting minutes from 2018 until 2022 for county, municipal, and school board governments within the St. Louis region. I then combine public participation data from these minutes with existing political and demographic datasets. Through a time-series cross-sectional analysis, I find that virtual meetings significantly increased participation in some local contexts but did not affect or decreased participation in others. Importantly, I find evidence that while virtual meetings experience similar inequalities in who participates as in offline meetings, they garner greater participation from women in county and school board governments.\\ 
+
+Before individuals decide whether to voice their concerns to a local government, they must, in some way, evaluate its performance. In the second paper, I examine how individuals form these evaluations and whether and how an individual's partisan identity may shape their evaluations. I argue that for some services, for which parties hold ideologically distanced and distinctly homogeneous opinions, evaluations of local services will be biased toward their party's average position regardless of a service's actual performance. To test this theory, I examine individual's evaluations of their local schools and police. Through a cross-sectional analysis of national survey respondents matched to measures of their local conditions, I find that for polarized services such as policing, individuals have a systematic bias in favor of their party's position regardless of the service's objective performance. Additionally, this bias exists irrespective of the partisan control of state and local governments.\\
+
+Finally, in the third paper, I introduce a promising framework to address a problem often hindering our coverage of local political data: the transformation of text-based sources. Political and legal texts include many meaningful data we need as researchers to quantify; however, these texts are often too complex to transform automatically and require slow and costly hand coding to do so correctly. I propose a novel approach: a human-in-the-loop pipeline that leverages Large Language Models (LLMs) to crowdsource and transform text-based sources into quantifiable datasets. Through case studies in local and judicial politics, I demonstrate that LLMs are a cost-effective alternative, producing results comparable to professional coders while significantly reducing transformation time. By easing the costs to process text-based sources, this framework promises to improve the accessibility of research and the coverage of important political outcomes.\\
+
+Overall, this dissertation makes significant contributions to understanding political participation in America's local governments by examining representation, evaluation, and coverage. It not only sheds light on the complexities and inequities of local democratic participation within an increasingly nationalized context but also introduces innovative methods to expand our understanding of local political dynamics.
 \end{abstract}
 
 \mainmatter
 \pagestyle{main}
-\include{thesis-chapter-structure}
-\include{thesis-chapter-format}
-\include{thesis-chapter-latex}
+\include{Chapter1}
+\include{Chapter2}
+\include{Chapter3}
+%\include{thesis-chapter-structure}
+%\include{thesis-chapter-format}
+%\include{thesis-chapter-latex}
 
 \begin{SingleSpace}
-\printbibliography
+\printbibliography[title={References}]
 \end{SingleSpace}
 
 \appendix
-\include{thesis-appendix-degree-program}
+\include{Chapter1Appendix}
+\include{Chapter2Appendix}
+\include{Chapter3Appendix}
 
 \end{document}

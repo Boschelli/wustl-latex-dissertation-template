@@ -1,0 +1,391 @@
+\chapter{Appendix For Is it All Good in the Neighborhood? How Partisanship May Shape Evaluations of Municipal Services}
+\label{app:Chapter2}
+\SingleSpacing*
+\setSingleSpace{1}
+
+
+\section{Survey Details}
+\subsection{Variable Distributions}
+\begin{table}[H] \centering 
+  \caption{Descriptive Statistics of Independent and Dependent Variables: Full CCES} 
+  \label{} 
+  \scalebox{0.8}{
+\begin{tabular}{@{\extracolsep{5pt}} cccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & Mean & Median & SD & Min & Max \\ 
+\hline \\[-1.8ex] 
+Individual Covariates: &&&&&\\
+\hline\\
+Age & $48.680$ & $49$ & $17.608$ & $18$ & $93$ \\ 
+Gender (M) & $0.445$ & $0$ & $0.497$ & $0$ & $1$ \\ 
+Parent & $0.658$ & $1$ & $0.475$ & $0$ & $1$ \\ 
+Republican & $0.377$ & $0$ & $0.485$ & $0$ & $1$ \\ 
+Independent & $0.139$ & $0$ & $0.346$ & $0$ & $1$ \\ 
+Black & $0.079$ & $0$ & $0.270$ & $0$ & $1$ \\ 
+Hispanic & $0.087$ & $0$ & $0.282$ & $0$ & $1$ \\ 
+Asian & $0.029$ & $0$ & $0.169$ & $0$ & $1$ \\ 
+Homeowner & $0.622$ & $1$ & $0.485$ & $0$ & $1$ \\ 
+Income & $6.412$ & $6$ & $3.306$ & $1$ & $16$ \\ 
+Rural & $0.150$ & $0$ & $0.357$ & $0$ & $1$ \\ \\
+Objective Measures: &&&&&\\
+\hline\\
+School Rating & $2.651$ & $2.605$ & $0.826$ & $0$ & $5$ \\ 
+Crime Rate (2018) & $482.325$ & $300.771$ & $534.689$ & $0$ & $3,063.617$ \\ 
+Crime Rate (2017) & $576.387$ & $355.356$ & $658.426$ & $0$ & $13,124.290$ \\ 
+Crime Rate Difference & $-97.506$ & $-27.720$ & $259.851$ & $-2,013.473$ & $1,195.273$ \\ \\
+Service Evaluations: &&&&&\\
+\hline\\
+School & $0.335$ & $0$ & $0.998$ & $-2$ & $2$ \\ 
+Police & $0.458$ & $0$ & $0.931$ & $-2$ & $2$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} }
+\end{table} 
+
+\begin{table}[H] \centering 
+  \caption{Difference in Covariate Means Between CCES and Large Cities Subset} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & CCES & Large City Subset & $\Delta$ & P-Value \\ 
+\hline \\[-1.8ex] 
+Demographics: &&&&\\
+\hline
+Age & 48.667 & 46.537 & 2.130 & 0 \\ 
+Gender (M) & 0.451 & 0.459 & -0.008 & 0.156 \\ 
+Parent & 0.654 & 0.572 & 0.082 & 0 \\ 
+Black & 0.091 & 0.145 & -0.054 & 0 \\ 
+Hispanic & 0.080 & 0.124 & -0.044 & 0 \\ 
+Asian & 0.028 & 0.041 & -0.013 & 0 \\ 
+Homeowner & 0.630 & 0.536 & 0.094 & 0 \\ 
+Rural Res. & 0.191 & 0.030 & 0.160 & 0 \\
+Income & 6.520 & 6.530 & -0.010 & 0.786 \\\\
+Partisanship: &&&&\\
+\hline
+Republican & 0.385 & 0.279 & 0.106 & 0 \\ 
+Independent & 0.122 & 0.111 & 0.011 & 0.001 \\\\
+Objective Measures: &&&&\\
+\hline
+School Rating & 2.628 & 2.271 & 0.357 & 0 \\ 
+Violent Crime Rate & 82.940 & 69.789 & 13.151 & 0 \\ 
+Property Crime Rate & 462.579 & 395.580 & 66.999 & 0 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\begin{tablenotes}
+    \item {\footnotesize Note: The above table presents results of a two sample t-test between the 2018 CCES and the new merged data set. Covariates such as Republican, Independent, and Black are coded as a binary choice.Income (1-10) is measured on its own categorical scale.Crime rates are standardized to incidents per 100,000 citizens.}
+\end{tablenotes}
+\end{table} 
+
+
+\section{Supplemental Analyses}
+\subsection{Full Regression Results For Table 1}
+
+\begin{table}[H] \centering 
+    \SingleSpacing*
+  \caption{OLS Regression of Local School and Police Evaluations on Partisan Identity: Full Results} 
+  \label{}
+  \scalebox{0.65}{
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Service Evaluation:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & Police & School \\ 
+\hline \\[-1.8ex] 
+ Republican & $0.264^{*}$ & -0.035 \\ 
+  & (0.018) & (0.028) \\ 
+  & & \\ 
+ Property Crime Rate & 0.00000 &  \\ 
+  & (0.00003) &  \\ 
+  & & \\ 
+ Violent Crime Rate & $-0.0004^{*}$ &  \\ 
+  & (0.0001) &  \\ 
+  & & \\ 
+ School Rating &  & $0.340^{*}$ \\ 
+  &  & (0.014) \\ 
+  & & \\
+ Age & $0.007^{*}$ & 0.0002 \\ 
+  & (0.0005) & (0.001) \\ 
+  & & \\ 
+ Gender (M) & 0.004 & $0.034^{*}$ \\ 
+  & (0.010) & (0.011) \\ 
+  & & \\ 
+ Parent & 0.018 & $0.087^{*}$ \\ 
+  & (0.012) & (0.015) \\ 
+  & & \\ 
+ Education & $0.013^{*}$ & 0.006 \\ 
+  & (0.005) & (0.004) \\ 
+  & & \\ 
+ Rural Res. & $-0.175^{*}$ & -0.028 \\ 
+  & (0.018) & (0.017) \\ 
+  & & \\ 
+ Homeowner & $0.053^{*}$ & $0.032^{*}$ \\ 
+  & (0.012) & (0.015) \\ 
+  & & \\ 
+ Black & $-0.282^{*}$ & -0.016 \\ 
+  & (0.033) & (0.035) \\ 
+  & & \\ 
+ Hispanic & $-0.038^{*}$ & 0.040 \\ 
+  & (0.015) & (0.027) \\ 
+  & & \\ 
+ Asian & 0.060 & $0.118^{*}$ \\ 
+  & (0.046) & (0.048) \\ 
+  & & \\ 
+ Income & $0.025^{*}$ & $0.016^{*}$ \\ 
+  & (0.002) & (0.002) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+State Fixed Effects & \ding{51}& \ding{51}\\
+Observations & 29,020 & 34,812 \\ 
+$R^{2}$ & 0.078 & 0.103 \\ 
+Adjusted $R^{2}$ & 0.076 & 0.101 \\ 
+F Statistic & 187.880 (df = 13; 28958) & 332.247 (df = 12; 34749) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}} 
+\begin{tablenotes}
+    \item {\footnotesize Note: The above table presents the results of a OLS regression with state fixed effects and clustered standard errors. Crime rates are standardized to incident per 100,000 citizens. Standard errors are presented in parentheses.$^{*}$p$<$0.05}
+\end{tablenotes}
+\end{table} 
+
+\begin{table}[H] \centering 
+    \SingleSpacing*
+  \caption{Hierarchical Linear Regression of Local Roads  Evaluation on Partisan Identity: Full Results} 
+  \label{} 
+  \scalebox{0.7}{
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Service Evaluation:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & Roads \\ 
+\hline \\[-1.8ex] 
+  Republican & 0.030 \\ 
+  & (0.026) \\ 
+  & \\ 
+ Traffic Index & $-$0.003 \\ 
+  & (0.003) \\ 
+  & \\ 
+ Age & $-0.005^{*}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ Gender (M) & 0.020 \\ 
+  & (0.022) \\ 
+  & \\ 
+ Parent & $0.049^{*}$ \\ 
+  & (0.024) \\ 
+  & \\ 
+ Education & 0.016\\ 
+  & (0.008) \\ 
+  & \\ 
+ Rural & $-0.102$ \\ 
+  & (0.095) \\ 
+  & \\ 
+ Homeowner & $0.075^{*}$ \\ 
+  & (0.025) \\ 
+  & \\ 
+ Black & $-0.175^{*}$ \\ 
+  & (0.033) \\ 
+  & \\ 
+ Hispanic & $-0.019$ \\ 
+  & (0.036) \\ 
+  & \\ 
+ Asian & $-0.036$ \\ 
+  & (0.056) \\ 
+  & \\ 
+ Income & $0.016^{*}$ \\ 
+  & (0.004) \\ 
+  & \\ 
+ Constant & $-0.003$ \\ 
+  & (0.077) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 6,928 \\ 
+State Random Effects & \ding{51}\\ 
+Municipality Random Effects & \ding{51}\\
+AIC & 18,191.980 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} }
+\begin{tablenotes}
+    \item {\footnotesize Note: The above table presents the results of a hierarchical linear regression with random effects. All respondents are nested within municipalities within states. Standard errors are presented in parentheses.$^{*}$p$<$0.05}
+\end{tablenotes}
+\end{table} 
+
+
+\subsection{Alternative Modeling Specifications}
+
+\begin{table}[H] \centering 
+    \SingleSpacing*
+  \caption{OLS Regression of Local School and Police Evaluations on Partisan Identity: Full Results and Independents} 
+  \label{} 
+  \scalebox{0.7}{
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Service Evaluation:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & Police & School \\ 
+\hline \\[-1.8ex] 
+ Republican & $0.261^{*}$ & -0.037 \\ 
+  & (0.018) & (0.028) \\ 
+  & & \\ 
+ Independent & $-0.048^{*}$ & $-0.185^{*}$ \\ 
+  & (0.018) & (0.021) \\ 
+  & & \\ 
+ Property Crime Rate & -0.00000 &  \\ 
+  & (0.00003) &  \\ 
+  & & \\ 
+ Violent Crime Rate & $-0.0004^{*}$ &  \\ 
+  & (0.0001) &  \\ 
+  & & \\ 
+ School Rating &  & $0.341^{*}$ \\ 
+  &  & (0.013) \\ 
+  & & \\ 
+ Age & $0.007^{*}$ & 0.0003 \\ 
+  & (0.0004) & (0.001) \\ 
+  & & \\ 
+ Gender (M) & -0.001 & $0.029^{*}$ \\ 
+  & (0.009) & (0.011) \\ 
+  & & \\ 
+ Parent & 0.021 & $0.089^{*}$ \\ 
+  & (0.011) & (0.014) \\ 
+  & & \\ 
+ Education & $0.012^{*}$ & 0.004 \\ 
+  & (0.005) & (0.004) \\ 
+  & & \\ 
+ Rural Res. & $-0.165^{*}$ & -0.020 \\ 
+  & (0.017) & (0.016) \\ 
+  & & \\ 
+ Homeowner & $0.055^{*}$ & $0.034^{*}$ \\ 
+  & (0.013) & (0.014) \\ 
+  & & \\ 
+ Black & $-0.289^{*}$ & -0.022 \\ 
+  & (0.033) & (0.032) \\ 
+  & & \\ 
+ Hispanic & $-0.046^{*}$ & 0.048 \\ 
+  & (0.014) & (0.026) \\ 
+  & & \\ 
+ Asian & 0.073& $0.115^{*}$ \\ 
+  & (0.040) & (0.044) \\ 
+  & & \\ 
+ Income & $0.026^{*}$ & $0.017^{*}$ \\ 
+  & (0.002) & (0.002) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+Observations & 32,994 & 39,548 \\ 
+$R^{2}$ & 0.078 & 0.106 \\ 
+Adjusted $R^{2}$ & 0.077 & 0.104 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} }
+\begin{tablenotes}
+    \item {\footnotesize Note: The above table presents the results of a OLS regression with state fixed effects and clustered standard errors. Crime rates are standardized to incident per 100,000 citizens. Standard errors are presented in parentheses.$^{*}$p$<$0.05}
+\end{tablenotes}
+\end{table} 
+
+
+\subsection{Alternative Model Specifications}
+\begin{table}[H] \centering 
+    \SingleSpacing*
+  \caption{Hierarchical Linear Regression of 7-Point Party ID on Local School and Police Evaluations} 
+  \label{} 
+  \scalebox{0.7}{
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Service Evaluation:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & Police & School \\ 
+\hline \\[-1.8ex] 
+ Party ID & 0.050$^{*}$ & $-$0.010$^{*}$ \\ 
+  & (0.002) & (0.002) \\ 
+  & & \\ 
+ Crime Rate & $-$0.0001$^{*}$ &  \\ 
+  & (0.00001) &  \\ 
+  & & \\ 
+ School Rating &  & 0.321$^{*}$ \\ 
+  &  & (0.007) \\ 
+  & & \\ 
+ Age & 0.007$^{*}$ & 0.0005 \\ 
+  & (0.0003) & (0.0003) \\ 
+  & & \\ 
+ Gender (M) & $-$0.006 & 0.023$^{*}$ \\ 
+  & (0.010) & (0.010) \\ 
+  & & \\ 
+ Parent & 0.013 & 0.086$^{*}$ \\ 
+  & (0.011) & (0.011) \\ 
+  & & \\ 
+ Education & 0.013$^{*}$ & 0.004 \\ 
+  & (0.004) & (0.003) \\ 
+  & & \\ 
+ Income & 0.025$^{*}$ & 0.017$^{*}$ \\ 
+  & (0.002) & (0.002) \\ 
+  & & \\ 
+ Rural & $-$0.179$^{*}$ & $-$0.045$^{*}$ \\ 
+  & (0.013) & (0.013) \\ 
+  & & \\ 
+ Homeowner & 0.051$^{*}$ & 0.030$^{*}$ \\ 
+  & (0.012) & (0.011) \\ 
+  & & \\ 
+ Black & $-$0.251$^{*}$ & 0.002 \\ 
+  & (0.020) & (0.018) \\ 
+  & & \\ 
+ Hispanic & $-$0.032 & 0.057$^{*}$ \\ 
+  & (0.020) & (0.019) \\ 
+  & & \\ 
+ Asian & 0.069$^{*}$ & 0.118$^{*}$ \\ 
+  & (0.032) & (0.030) \\ 
+  & & \\ 
+ Constant & $-$0.254$^{*}$ & $-$0.682$^{*}$ \\ 
+  & (0.031) & (0.044) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+State Fixed Effects & \ding{51}& \ding{51}\\ 
+Municipality Fixed Effects & \ding{51}& \ding{51}\\
+Observations & 32,994 & 39,548 \\ 
+AIC & 86,091.060 & 106,191.300 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} }
+\begin{tablenotes}
+    \item {\footnotesize Note: The above table presents the results of a hierarchical linear regression with random effects. All respondents are nested within municipalities within states. Standard errors are presented in parentheses.$^{*}$p$<$0.05}
+\end{tablenotes}
+\end{table} 
+
+\begin{table}[H] \centering 
+  \caption{Hierarchical Regression Results With Alternative Measures of Police Performance} 
+  \label{} 
+  \scalebox{0.9}{
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ 2017 Crime Rate & 0.00001 &  \\ 
+  & (0.00003) &  \\ 
+  & & \\ 
+ 2018 Crime Rate & $-$0.0001$^{*}$ &  \\ 
+  & (0.00004) &  \\ 
+  & & \\ 
+ Crime Rate Difference &  & 0.00000 \\ 
+  &  & (0.00003) \\ 
+  & & \\ 
+ Constant & $-$0.138$^{*}$ & $-$0.186$^{*}$ \\ 
+  & (0.031) & (0.030) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+State Fixed Effects & \ding{51}& \ding{51}\\ 
+Municipality Fixed Effects & \ding{51}& \ding{51}\\
+Additional Controls & \ding{51}& \ding{51}\\
+Observations & 32,115 & 32,115 \\ 
+AIC & 83,722.270 & 83,730.040 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} }
+\begin{tablenotes}
+    \item {\footnotesize Note: The above table presents the results of a hierarchical linear regression with random effects. Model (1) includes both current and lagged crime rates. Model (2) includes only the year change in crime rates. All respondents are nested within municipalities within states. Standard errors are presented in parentheses.$^{*}$p$<$0.05}
+\end{tablenotes}
+\end{table}
+

@@ -1,0 +1,258 @@
+\chapter{Appendix For Utilizing Large Language Models To Transform Messy Text-Based Sources In Useful Data}
+\label{app:Chapter3}
+\SingleSpacing*
+\setSingleSpace{1}
+
+
+\section{Example Applications}
+
+\subsection{Local Meeting Minutes:}
+The following section displays a selection of meeting minute excerpts and their resulting output from OpenAI's GPT 3.5 model. For each example, I prompted the model with the prompt displayed within the body of the main paper and then fed the entirety of the meeting text from which the excerpt originated into the model.
+
+
+\begin{figure}[H]
+\centering
+\textbf{Meeting Text Excerpt \#1}\par\medskip
+\begin{lstlisting}[label={lst:brief-text}]
+Middle school math teacher Megan Grossbauer, received the district's 
+Excellence in Education Award for leadership and contributions 
+to the learning environment for students in the district. Those 
+in attendance viewed a video of Mrs. Grossbauer filmed by high 
+school teacher Don Goble.
+
+Turning to the superintendent's remarks, Dr. Wipke congratulated 
+Megan on her well-deserved recognition and talked about his recent 
+podcast recording which included Megan. Dr.Wipke went on to share brief 
+updates related to the transition back to in-person learning for
+students and plans to remain aligned with St. Louis County Health 
+Department recommendations as COVID-19 trends appear to be increasing. 
+Dr. Wipke also highlighted the recent design meeting hosted by several 
+architect team members from Ittner and Perkins & Will. Dr. Wipke 
+commended Sue Blumm and her foodservice team for their quick planning 
+to ensure all meals served at Old Bonhomme were uninterrupted as they 
+were faced with a boil order last week.
+
+President Jaeger called for Board committee reports. 
+Dr. Buckner reported on the Finance and Facilities Board Advisory 
+Committees.
+
+President Jaeger called for superintendent committee reports. 
+Dr. Buckner reported on the Superintendent's Finance 
+and Facilities Committee.
+
+One patron, Andy Cohen, addressed the Board during the time period 
+set aside for public comments regarding agenda and non-agenda items.
+
+Turning to the action agenda, Mrs. Jaeger called for a 
+motion to approve the evening's consent agenda. On a motion 
+by Mr. Johnson, seconded by Dr. Goldstein, the following
+resolution passed on a vote of 7-0:
+\end{lstlisting}
+\caption[Meeting Text Example \#1]{Sample School District Meeting Text From Ladue School District}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\textbf{Model Output:}\par\medskip
+\begin{lstlisting}[language=python]
+{
+"Name": ["Andy Cohen"],
+"Address": ["NA"],
+"Comment": ["Comment regarding agenda and non-agenda items"]
+}
+\end{lstlisting}
+\caption[Meeting Text Example Output \#1]{Formatted output from the LLM}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\textbf{Meeting Text Excerpt \#2}\par\medskip
+\begin{lstlisting}[]
+3. ANNOUNCEMENTS
+3.01 Student Representative Announcements
+Ms. Jaiden Smith was not present.
+3.02 Superintendent's Announcements
+Dr. Hardin-Bartley read superintendent announcements.
+4. CITIZEN COMMENTS
+4.01 Citizen Comments
+e Stacy Brown- surplus property
+e Maureen Axelbaum- surplus property
+e Nicole Adewale- surplus property
+e Jacqueline Stack- surplus property
+e Colleen Dille- surplus property
+e Roma Trousdale- surplus property
+e Aaren Ginsburg- surplus property
+e Lori Yudovich- surplus property
+e Yvette Joy Liebesman, 7570 Cornell Avenue- surplus property
+e Steven McMahon- surplus property
+e Mark Tubbs- surplus property
+e Meg A Ullman- surplus property
+e Kim Field- surplus property
+5. CONSENT AGENDA
+5.01 Approval of the Consent Agenda
+\end{lstlisting}
+\caption[Meeting Text Example \#2]{Sample of Meeting Text From University City School District}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\textbf{Model Output:}\par\medskip
+\begin{lstlisting}[]
+[
+{ "Name": ["Stacy Brown"], 
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{ "Name": ["Maureen Axelbaum"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Nicole Adewale"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Jacqueline Stack"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Colleen Dille"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Roma Trousdale"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Aaren Ginsburg"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Lori Yudovich"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Yvette Joy Liebesman"],
+"Address": ["7570 Cornell Avenue"],
+"Comment": ["Surplus property"]},
+{"Name": ["Steven McMahon"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Mark Tubbs"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Meg A Ullman"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]},
+{"Name": ["Kim Field"],
+"Address": ["NA"],
+"Comment": ["Surplus property"]}
+]
+\end{lstlisting}
+\caption[Meeting Text Example Output \#2]{Formatted output from the LLM}
+\end{figure}
+
+\subsection{Amicus Curiae Briefs:}
+The following section displays an example amicus curiae brief excerpt and its resulting output from OpenAI's GPT 3.5 model. For this example, I prompted the model with the prompt displayed within the body of the main paper and then fed the first and last 10 pages of the brief from which the excerpt originates into the model.
+
+\begin{figure}[H]
+\centering
+\textbf{Brief Text Excerpt \#1}\par\medskip
+\begin{lstlisting}[]
+No. 14-15
+In the supremee Court of the United states
+
+RICHARD ARMSTRONG, et al.,
+Petitioners,
+V.
+EXCEPTIONAL CHILD CENTER, INC., et al.,
+Respondents.
+
+On Writ of Certiorari to the United States
+Court of Appeals for the Ninth Circuit
+Brief of Amici Curiae National Health Law Program,
+AARP, Service Employees International Union, 
+NationalRespondentLegal Aid and Defender Association, 
+Sargent Shriver National Center on Poverty Law, 
+National Disability Rights Network, 
+DisAbility Rights Idaho, Center for Medicare Advocacy, 
+National Senior Citizens Law Center, First Focus, 
+National Center for Youth Law, National Center for 
+Law and Economic Justice, National Housing Law Project, 
+National Women's Law Center, 
+Planned Parenthood Federation of America, 
+National Family Planning & Reproductive Health Association, 
+National Latina Institute for Reproductive Health, 
+Asian Americans Advancing Justice Los Angeles, 
+Southern Poverty Law Center in Support of Respondents
+
+Kelly Bagby Jane Perkins
+AARP Foundation Counsel of Record
+Litigation National Health
+Counsel for Amici Curiae
+Becker Gallagher Cincinnati, 
+OH Washington, D.C. 800.890.5001
+\end{lstlisting}
+\caption[Amicus Curiae Brief Example Output \#1]{Sample of amicus curiae brief text}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\textbf{Model Output:}\par\medskip
+\begin{lstlisting}[]
+{
+"National Health Law Program": 
+Respondent,
+"AARP": 
+Respondent,
+"Service Employees International Union": 
+Respondent,
+"National Legal Aid and Defender Association": 
+Respondent,
+"Sargent Shriver National Center on Poverty Law": 
+Respondent,
+"National Disability Rights Network": 
+Respondent,
+"DisAbility Rights Idaho": 
+Respondent,
+"Center for Medicare Advocacy": 
+Respondent,
+"National Senior Citizens Law Center": 
+Respondent,
+"First Focus" : 
+Respondent,
+"National Center for Youth Law": 
+Respondent,
+"National Center for Law and Economic Justice": 
+Respondent,
+"National Housing Law Project": 
+Respondent,
+"National Women's Law Center": 
+Respondent,
+"Planned Parenthood Federation of America": 
+Respondent,
+"National Family Planning&Reproductive Health Association": 
+Respondent,
+"National Latina Institute for Reproductive Health": 
+Respondent,
+"Asian Americans Advancing Justice Los Angeles": 
+Respondent,
+"Southern Poverty Law Center": 
+Respondent
+}
+\end{lstlisting}
+\caption[Example Model Output \#1]{Formatted output from the LLM}
+\end{figure}
+
+
+
+\section{Alternative BERT-based Approach}
+To highlight how Large Language Models (LLMs) compare to other modern machine learning solutions. I process all local meeting minutes within my sample using BERT-based Named Entity Recognition (NER). These models are trained to identify concepts such as people, locations, organizations, dates, and other entities from text and provide the next best solution to the problem of extracting public commenters from meeting minutes. For this application, I utilize an open-source implementation from the spaCy natural language processing toolkit. Importantly, I do not retrain the model to identify commenters specifically; instead, I rely on its ability to identify individuals' names with texts. To compensate for this lack of additional training, I preprocess each set of meeting minutes only to include the rough text surrounding their public comment sections, which I identify using typical section titles or specific references or calls for comments. I then utilize the model to identify all individuals within these sections and assume the proceeding text represents their address and comment. Given that the model can not distinguish between public officials and regular commenters, I remove all commenters whose names include formal governmental titles such as ``counselor,'' ``chair,'' or ``alderperson.'' \autoref{tab:NERComp} below presents the model's performance relative to that of the LLM from the main paper across both the training and unlabeled data sets. Overall, the NER model performed markedly worse than the LLM and required significantly more implementation and coding to transform the texts successfully. While a trained model could likely close this performance gap, the accessibility and adaptability of LLMs make them a far more attractive tool for transforming text-based sources.
+
+\begin{table}[H]
+    \centering
+    \caption{LLMs Compared to Alternative Name Entity Recognition Approach}
+    \label{tab:NERComp}
+    \begin{tabular}{l|c|c|c}
+    \hline
+    Model & Precision & Recall & F1 \\
+    \hline
+    $NER$ & 0.78 & 0.85 & 0.81 \\
+    $LLM_{Training}$ & 0.934 & 0.984 & 0.957 \\
+    $LLM_{Unlabled}$ & 0.935 & 0.977 & 0.950 \\
+    \hline
+    \end{tabular}
+    
+    \end{table}

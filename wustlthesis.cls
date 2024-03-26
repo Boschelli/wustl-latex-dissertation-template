@@ -65,9 +65,9 @@
     \renewcommand*{\chapnumfont}{\normalfont\LARGE\bfseries}
     \renewcommand*{\chaptitlefont}{\normalfont\LARGE\bfseries}
     \renewcommand*{\printchaptername}{%
-        \OnehalfSpacing\centering\chapnamefont\chaptername\ }
-    \renewcommand*{\printchapternum}{\thechapter:\ }
-    \renewcommand*{\printchapternonum}{\OnehalfSpacing\centering}
+        \OnehalfSpacing\chapnamefont\chaptername\ }
+    \renewcommand*{\printchapternum}{\thechapter:\ \\}
+    \renewcommand*{\printchapternonum}{\OnehalfSpacing}
 }
 
 % Default chapter style
@@ -278,3 +278,4 @@
     \setlength{\absparindent}{0em}
     \setlength{\absrightindent}{0em}
 }
+\renewcommand\bibname{References}
